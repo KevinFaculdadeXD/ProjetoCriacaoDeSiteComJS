@@ -1,11 +1,25 @@
-<script setup></script>
+<script setup>
+  import { RouterView, RouterLink } from 'vue-router'
+  import './css/main.css'
+</script>
 
 <template>
-  <h1>You did it!</h1>
-  <p>
-    Visit <a href="https://vuejs.org/" target="_blank" rel="noopener">vuejs.org</a> to read the
-    documentation
-  </p>
-</template>
+  <div class="app-container">
+    <header class="navbar">
+      <div class="logo">XCars Motors</div>
+      <nav class="nav-links">
+        <RouterLink to="/">Home</RouterLink>
+        <RouterLink to="/catalogo">Catalogo</RouterLink>
+        <RouterLink to="/contato">Contato</RouterLink>
+      </nav>
+    </header>
 
-<style scoped></style>
+    <main class="content">
+      <RouterView />
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 XCars Motors - Desafio Front-End</p>
+    </footer>
+  </div>
+</template>
