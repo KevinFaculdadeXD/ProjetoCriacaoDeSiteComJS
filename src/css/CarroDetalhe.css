@@ -29,22 +29,20 @@
   flex-direction: column;
 }
 
-/* ALTERADO: Fundo preto puro para sumir com o degradê azul da moldura */
 .img-wrapper {
   width: 100%;
   height: 400px;
-  background: #000000; /* Removido o radial-gradient que causava a mancha */
+  background: #000000; 
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0; /* Removido o padding para a imagem poder encostar nas bordas se necessário */
+  padding: 0; 
 }
 
-/* ALTERADO: Ajustado para cobrir melhor o espaço mantendo a proporção */
 .img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Se preferir que não corte nada do fundo preto da foto, mude para contain */
+  object-fit: cover;
 }
 
 .info-carro {
