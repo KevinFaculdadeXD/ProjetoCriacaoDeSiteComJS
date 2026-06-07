@@ -1,7 +1,7 @@
 <template>
   <div class="container">
-    <h2>Catálogo de Veículos</h2>
-    <p>Em breve os carros do Kevin estarão listados aqui de forma interativa!</p>
+    <h1>Catálogo de Veículos</h1>
+    <h3>Caros que temos no momento (aproveita enquanto da tempo!!!)</h3>
   </div>
 </template>
 

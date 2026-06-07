@@ -6,8 +6,9 @@
 <template>
   <div class="app-container">
     <header class="navbar">
-      <div class="logo">XCars Motors</div>
+      <div class="logo">XDCars Motors</div>
       <nav class="nav-links">
+        <input type="text" v-model="pesquisa" placeholder="Pesquisar carro...">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/catalogo">Catalogo</RouterLink>
         <RouterLink to="/contato">Contato</RouterLink>
@@ -19,7 +20,7 @@
     </main>
 
     <footer class="footer">
-      <p>&copy; 2026 XCars Motors - Desafio Front-End</p>
+      <p>&copy; 2026 XDCars Motors - Desafio Front-End</p>
     </footer>
   </div>
 </template>
