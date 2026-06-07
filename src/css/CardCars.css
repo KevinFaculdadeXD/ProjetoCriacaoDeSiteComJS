@@ -1,0 +1,86 @@
+.card-carro {
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.2s, border-color 0.2s;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-carro:hover {
+  transform: translateY(-5px);
+  border-color: #38bdf8;
+}
+
+.card-imagem {
+  width: 100%;
+  height: 200px;
+  background-color: #0f172a;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.card-imagem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-conteudo {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+.marca-tag {
+  color: #38bdf8;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 1px;
+  margin-bottom: 0.25rem;
+}
+
+.card-conteudo h3 {
+  font-size: 1.4rem;
+  color: #f8fafc;
+  margin-bottom: 0.5rem;
+}
+
+.ano-texto {
+  color: #94a3b8;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.card-footer {
+  margin-top: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.preco-texto {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #f8fafc;
+}
+
+.btn-detalhes {
+  background-color: #38bdf8;
+  color: #0f172a;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 700;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+}
+
+.btn-detalhes:hover {
+  background-color: #0ea5e9;
+}
