@@ -1,3 +1,4 @@
+
 <template>
   <div class="hero-section">
     <h1>Bem-vindo à XDCars Motors</h1>
