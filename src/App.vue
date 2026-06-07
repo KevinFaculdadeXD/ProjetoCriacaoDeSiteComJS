@@ -6,7 +6,7 @@
 <template>
   <div class="app-container">
     <header class="navbar">
-      <div class="logo">XDCars Motors</div>
+      <div class="logo">XD Carros</div>
       <nav class="nav-links">
         <input type="text" v-model="pesquisa" placeholder="Pesquisar carro...">
         <RouterLink to="/">Home</RouterLink>
@@ -21,7 +21,7 @@
     </main>
 
     <footer class="footer">
-      <p>2026 XDCars Motors - Desafio Front-End</p>
+      <p>2026 XD Carros - Desafio Front-End</p>
       <p>Trabalho feito por Kevin Richardt e Gabriel Hardt Klipe</p>
       <p>&copy; Universidade Campo Real - 2026</p>
     </footer>
