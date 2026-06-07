@@ -21,7 +21,9 @@
     </main>
 
     <footer class="footer">
-      <p>&copy; 2026 XDCars Motors - Desafio Front-End</p>
+      <p>2026 XDCars Motors - Desafio Front-End</p>
+      <p>Trabalho feito por Kevin Richardt e Gabriel Hardt Klipe</p>
+      <p>&copy; Universidade Campo Real - 2026</p>
     </footer>
   </div>
 </template>
