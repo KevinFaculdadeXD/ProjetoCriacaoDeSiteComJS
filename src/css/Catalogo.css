@@ -1,25 +1,61 @@
+
 .catalogo-header {
-  margin-bottom: 2.5rem;
+  margin-top: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
 }
 
 .catalogo-header h2 {
-  font-size: 2rem;
-  color: #38bdf8;
+  font-size: 2.4rem;
+  color: #f8fafc;
+  font-weight: 800;
   margin-bottom: 0.5rem;
 }
 
 .catalogo-header p {
   color: #94a3b8;
+  font-size: 1.05rem;
 }
 
 .busca-container {
-  margin-bottom: 2rem;
-  max-width: 400px;
+  margin: 0 auto 3.5rem auto;
+  max-width: 550px;
+  width: 100%;
+}
+
+.busca-container .input-control {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 10px;
+  color: #f8fafc;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.busca-container .input-control:focus {
+  outline: none;
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
 }
 
 .grid-carros {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
-  gap: 2rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
+  margin-bottom: 5rem;
+}
+
+@media (max-width: 1024px) {
+  .grid-carros {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 720px) {
+  .grid-carros {
+    grid-template-columns: 1fr;
+  }
 }
