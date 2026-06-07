@@ -1,0 +1,161 @@
+.page-carro {
+  margin-bottom: 5rem;
+}
+
+.btn-voltar {
+  color: #38bdf8;
+  text-decoration: none;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  transition: color 0.2s ease;
+}
+
+.btn-voltar:hover {
+  color: #0ea5e9;
+}
+
+.hero-carro {
+  background-color: #1e293b;
+  border: 1px solid #2d3748;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ALTERADO: Fundo preto puro para sumir com o degradê azul da moldura */
+.img-wrapper {
+  width: 100%;
+  height: 400px;
+  background: #000000; /* Removido o radial-gradient que causava a mancha */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0; /* Removido o padding para a imagem poder encostar nas bordas se necessário */
+}
+
+/* ALTERADO: Ajustado para cobrir melhor o espaço mantendo a proporção */
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Se preferir que não corte nada do fundo preto da foto, mude para contain */
+}
+
+.info-carro {
+  padding: 2rem;
+  text-align: center;
+  border-top: 1px solid #334155;
+}
+
+.titulo-carro {
+  font-size: 2.8rem;
+  color: #f8fafc;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+}
+
+.titulo-carro .modelo {
+  color: #94a3b8;
+  font-weight: 500;
+}
+
+.preco-carro {
+  font-size: 2.2rem;
+  color: #38bdf8;
+  font-weight: 800;
+}
+
+.detalhes-container {
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  gap: 3rem;
+  margin-bottom: 3rem;
+}
+
+.col-info, .col-ficha {
+  background-color: #1e293b;
+  border: 1px solid #2d3748;
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.col-info h3, .col-ficha h3 {
+  font-size: 1.5rem;
+  color: #f8fafc;
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid #334155;
+  padding-bottom: 0.5rem;
+}
+
+.col-info p {
+  color: #94a3b8;
+  line-height: 1.8;
+}
+
+.ficha-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.ficha-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label-ficha {
+  color: #64748b;
+  font-size: 0.85rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.valor-ficha {
+  color: #f8fafc;
+  font-size: 1.1rem;
+  font-weight: 700;
+}
+
+.acao-venda {
+  text-align: center;
+  padding: 3rem;
+  background-color: #0f172a;
+  border-radius: 16px;
+  border: 1px solid #334155;
+  margin-top: 4rem;
+}
+
+.acao-venda p {
+  color: #f8fafc;
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+}
+
+.btn-primary-largo {
+  composes: btn-primary;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  border-radius: 10px;
+}
+
+@media (max-width: 960px) {
+  .detalhes-container {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .titulo-carro {
+    font-size: 2rem;
+  }
+}
