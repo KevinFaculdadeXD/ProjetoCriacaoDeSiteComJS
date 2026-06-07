@@ -1,6 +1,6 @@
-.box-contato {
-  max-width: 550px;
-  margin: 3rem auto;
+.box-venda {
+  max-width: 700px;
+  margin: 2rem auto;
   background-color: #1e293b;
   padding: 2.5rem;
   border-radius: 12px;
@@ -8,23 +8,28 @@
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.3);
 }
 
-.box-contato h2 {
+.box-venda h2 {
   color: #38bdf8;
   font-size: 1.8rem;
   font-weight: 700;
-  margin-bottom: 0.5rem;
   text-align: center;
+  margin-bottom: 0.5rem;
 }
 
-.box-contato p {
+.box-venda .subtitulo {
   color: #94a3b8;
-  font-size: 0.95rem;
   text-align: center;
   margin-bottom: 2rem;
-  line-height: 1.5;
+  font-size: 0.95rem;
 }
 
-.formulario {
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.formulario-venda {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
@@ -40,18 +45,11 @@
   color: #f8fafc;
   font-weight: 600;
   font-size: 0.9rem;
-  letter-spacing: 0.5px;
 }
 
-.campo-texto {
-  resize: vertical;
-  min-height: 130px;
-  font-family: inherit;
-}
-
-.formulario .btn-primary {
-  width: 100%;
-  padding: 0.85rem;
-  font-size: 1.05rem;
-  margin-top: 0.5rem;
+@media (max-width: 640px) {
+  .form-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
 }

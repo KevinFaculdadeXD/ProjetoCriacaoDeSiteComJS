@@ -12,6 +12,7 @@
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/catalogo">Catalogo</RouterLink>
         <RouterLink to="/contato">Contato</RouterLink>
+        <RouterLink to="/vender">Vender</RouterLink>
       </nav>
     </header>
 
