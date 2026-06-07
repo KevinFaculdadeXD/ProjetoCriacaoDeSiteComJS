@@ -39,6 +39,24 @@ const carros = ref([
     preco: '19.900',
     imagem: '/src/assets/img/Volkswagen Gol 96.jpg',
     rota: '/carro/volkswagen'
+  },
+  {
+    id: '5',
+    nome: 'Twingo',
+    marca: 'Renault',
+    ano: '2000',
+    preco: 'VENDIDO',
+    imagem: '/src/assets/img/Renault Twingo.jpg',
+    rota: ''
+  },
+  {
+    id: '6',
+    nome: 'Fusca',
+    marca: 'Volkswagen',
+    ano: '1985',
+    preco: 'VENDIDO',
+    imagem: '/src/assets/img/Fusca brabo.jpg',
+    rota: ''
   }
 ])
 
@@ -74,7 +92,7 @@ const carrosFiltrados = computed(() => {
         :nome="carro.nome"
         :marca="carro.marca"
         :ano="carro.ano"
-        :preco=carro.preco
+        :preco="carro.preco"
         :imagem="carro.imagem"
         :rota="carro.rota"
       />
