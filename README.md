@@ -1,41 +1,75 @@
-# ProjetoCriacaoDeSiteComJS
+      XD Carros
 
-This template should help get you started developing with Vue 3 in Vite.
+Site de compra e venda de veículos desenvolvido com Vue 3 e Vite. 
+Projeto acadêmico da Universidade Campo Real, com foco na criação de uma SPA completa utilizando JavaScript moderno.
 
-## Recommended IDE Setup
+      Sobre o Projeto
+A XD Carros é uma plataforma fictícia de compra e venda de veículos que permite aos usuários navegar por um catálogo de carros, visualizar detalhes de cada modelo, anunciar um veículo à venda e entrar em contato com a equipe.
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+O projeto foi desenvolvido como desafio de Front-End pelos alunos Kevin Richardt e Gabriel Hardt Klipe.
 
-## Recommended Browser Setup
+      Funcionalidades
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
+  Home — Apresentação da loja com banner de destaque e cards dos veículos em evidência
+  Catálogo — Listagem completa dos veículos com busca por nome ou marca em tempo real
+  Detalhe do Carro — Página individual com foto, descrição e ficha técnica de cada veículo
+  Anunciar Veículo — Formulário para adicionar um novo carro ao catálogo dinamicamente
+  Contato — Formulário para envio de proposta ou dúvidas à equipe
+  Pesquisa global — Barra de busca no header que redireciona para o catálogo filtrado
 
-## Customize configuration
+      Estrutura do Projeto
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+    src/
+    ├── assets/
+    │   └── img/              # Imagens dos veículos
+    ├── components/
+    │   └── CardCarro.vue     # Componente reutilizável de card de veículo
+    ├── css/                  # Arquivos de estilo por página/componente
+    │   ├── main.css
+    │   ├── Home.css
+    │   ├── Catalogo.css
+    │   ├── CardCars.css
+    │   ├── CarroDetalhe.css
+    │   ├── Vender.css
+    │   └── Contato.css
+    ├── data/
+    │   └── carros.js         # Lista reativa global de veículos (Vue ref)
+    ├── router/
+    │   └── index.js          # Configuração das rotas
+    ├── views/
+    │   ├── Home.vue
+    │   ├── Catalogo.vue
+    │   ├── CarroDetalhe.vue
+    │   ├── Vender.vue
+    │   └── Contato.vue
+    ├── App.vue               # Layout raiz com navbar e footer
+    └── main.js               # Ponto de entrada da aplicação
 
-## Project Setup
+          Rotas
+Rota            Página
+/               Home 
+/catalogo       Catálogo com busca
+/carro/:id      Detalhe do veículo
+/vender         Formulário de anúncio
+/contato        Formulário de contato
 
-```sh
+Como Rodar
+Pré-requisitos: Node.js ^20.19.0 ou >=22.12.0
+bash# Instalar dependências
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+#  Iniciar servidor de desenvolvimento
 npm run dev
-```
 
-### Compile and Minify for Production
-
-```sh
+# Build para produção
 npm run build
-```
 
-XD
+# Visualizar o build
+npm run preview
 
+Autores
+
+Kevin Richardt
+Gabriel Hardt Klipe
+
+Universidade Campo Real — 2026
