@@ -4,7 +4,7 @@ import Catalogo from '../views/Catalogo.vue'
 import Contato from '../views/Contato.vue'
 import Vender from '../views/Vender.vue'
 
-// Importando as páginas internas da pasta cars
+
 import Chevrolet from '../cars/Chevrolet.vue'
 import Fiat from '../cars/Fiat.vue'
 import Subaru from '../cars/Subaru.vue'

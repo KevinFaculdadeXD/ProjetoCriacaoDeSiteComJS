@@ -1,5 +1,9 @@
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { listaCarros } from '../data/carros.js'
+
+const router = useRouter()
 
 const marca = ref('')
 const modelo = ref('')
@@ -8,13 +12,23 @@ const preco = ref('')
 const foto = ref('')
 
 const anunciarCarro = () => {   
-  alert(`Sucesso! Seu ${marca.value} ${modelo.value} foi anunciado na XCars Motors.`)
+  const novoId = String(listaCarros.value.length + 1)
   
-  marca.value = ''
-  modelo.value = ''
-  ano.value = ''
-  preco.value = ''
-  foto.value = ''
+  const novoCarro = {
+    id: novoId,
+    nome: modelo.value,
+    marca: marca.marca || marca.value,
+    ano: String(ano.value),
+    preco: Number(preco.value).toLocaleString('pt-BR'),
+    imagem: foto.value || 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500',
+    rota: ''
+  }
+
+  listaCarros.value.push(novoCarro)
+  
+  alert(`Sucesso! Seu ${marca.value} ${modelo.value} foi anunciado na XD Carros.`)
+  
+  router.push('/catalogo')
 }
 </script>
 
