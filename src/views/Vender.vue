@@ -17,17 +17,34 @@ const anunciarCarro = () => {
   const novoCarro = {
     id: novoId,
     nome: modelo.value,
-    marca: marca.marca || marca.value,
+    marca: marca.value,
     ano: String(ano.value),
     preco: Number(preco.value).toLocaleString('pt-BR'),
     imagem: foto.value || 'https://images.unsplash.com/photo-1533473359331-0135ef1b58bf?w=500',
-    rota: ''
+    
+    rota: `/carro/${novoId}`,
+    descricao: 'Veículo anunciado pelo portal XD Carros. Entre em contato para consultar o histórico de revisões e conservação com o proprietário.',
+    especificacoes: [
+      { nome: 'Motor', valor: 'Não especificado' },
+      { nome: 'Câmbio', valor: 'Não especificado' },
+      { nome: 'Combustível', valor: 'Não especificado' },
+      { nome: 'Cor', valor: 'Não especificado' },
+      { nome: 'Status', valor: 'Disponível' }
+    ]
   }
+
+  
 
   listaCarros.value.push(novoCarro)
   
   alert(`Sucesso! Seu ${marca.value} ${modelo.value} foi anunciado na XD Carros.`)
   
+  marca.value = ''
+  modelo.value = ''
+  ano.value = ''
+  preco.value = ''
+  foto.value = ''
+
   router.push('/catalogo')
 }
 </script>

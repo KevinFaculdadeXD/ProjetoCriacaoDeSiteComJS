@@ -13,7 +13,6 @@ watch(() => route.query.busca, (novoValor) => {
 })
 
 const carrosFiltrados = computed(() => {
-  // Filtra direto em cima da nossa lista global
   return listaCarros.value.filter(carro => 
     carro.nome.toLowerCase().includes(termoBusca.value.toLowerCase()) ||
     carro.marca.toLowerCase().includes(termoBusca.value.toLowerCase())
@@ -49,6 +48,10 @@ const carrosFiltrados = computed(() => {
         :imagem="carro.imagem"
         :rota="carro.rota"
       />
+    </div>
+
+    <div v-if="carrosFiltrados.length === 0" style="text-align: center; color: #888; padding: 40px;">
+      <p style="font-size: 1.2rem;">Esse carro não existe... 😢</p>
     </div>
   </div>
 </template>

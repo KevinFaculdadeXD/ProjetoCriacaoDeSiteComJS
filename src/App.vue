@@ -16,7 +16,6 @@ const efetuarBusca = () => {
     <header class="navbar">
       <div class="logo" @click="router.push('/')" style="cursor: pointer;">XD Carros</div>
       <nav class="nav-links">
-        <input type="text" v-model="pesquisa" @keyup.enter="efetuarBusca" placeholder="Pesquisar carro...">
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/catalogo">Catalogo</RouterLink>
         <RouterLink to="/contato">Contato</RouterLink>

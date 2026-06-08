@@ -57,7 +57,6 @@ const carrosDestaque = [
 </script>
 
 <template>
-  <!-- Hero -->
   <div class="hero-section">
     <h1>Bem-vindo à XD Carros</h1>
     <p>A sua nova referência em veículos exclusivos, esportivos e de alta performance.</p>
