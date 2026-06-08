@@ -14,7 +14,15 @@ const router = createRouter({
     { path: '/vender', name: 'vender', component: Vender },
     { path: '/contato', name: 'contato', component: Contato },
     { path: '/carro/:id', name: 'carro-detalhe', component: CarroDetalhe }
-  ]
+  ], 
+
+  scrollBehavior(to, from, savedPosition) {
+    if (savedPosition) {
+      return savedPosition
+    } else {
+      return { top: 0 }
+    }
+  }
 })
 
 export default router
