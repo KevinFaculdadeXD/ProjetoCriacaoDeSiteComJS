@@ -9,7 +9,15 @@ const carrosDestaque = [
     ano: '1998',
     preco: '85.000',
     imagem: '/src/assets/img/Subaru Impreza 98.jpg',
-    rota: '/carro/subaru'
+    rota: '/carro/3',
+    descricao: 'Ícone dos ralis mundiais. Tração integral sob demanda, motor Boxer turbo e uma experiência de pilotagem purista incomparável.',
+    especificacoes: [
+      { nome: 'Motor', valor: '2.0 Turbo' },
+      { nome: 'Câmbio', valor: 'Manual' },
+      { nome: 'Combustível', valor: 'Gasolina' },
+      { nome: 'Cor', valor: 'Azul WRX' },
+      { nome: 'Status', valor: 'Disponível' }
+    ]
   },
   {
     id: '1',
@@ -18,7 +26,15 @@ const carrosDestaque = [
     ano: '2006',
     preco: '32.000',
     imagem: '/src/assets/img/Chevrolet Vectra.jpg',
-    rota: '/carro/chevrolet'
+    rota: '/carro/1',
+    descricao: 'Vectra Elegance em excelente estado de conservação. Oferece o máximo em conforto e presença, ideal para quem busca um sedan robusto, espaçoso e com ótimo custo-benefício.',
+    especificacoes: [
+      { nome: 'Motor', valor: '2.0 8V' },
+      { nome: 'Câmbio', valor: 'Manual' },
+      { nome: 'Combustível', valor: 'Flex' },
+      { nome: 'Cor', valor: 'Preto / Cinza' },
+      { nome: 'Status', valor: 'Disponível' }
+    ]
   },
   {
     id: '4',
@@ -27,7 +43,15 @@ const carrosDestaque = [
     ano: '1996',
     preco: '19.900',
     imagem: '/src/assets/img/Volkswagen Gol 96.jpg',
-    rota: '/carro/volkswagen'
+    rota: '/carro/4',
+    descricao: 'O queridinho do Brasil em sua versão clássica quadrada. Motor AP forte e de manutenção extremamente barata, ideal para colecionadores ou projetos.',
+    especificacoes: [
+      { nome: 'Motor', valor: '1.6 AP' },
+      { nome: 'Câmbio', valor: 'Manual' },
+      { nome: 'Combustível', valor: 'Gasolina' },
+      { nome: 'Cor', valor: 'Vermelho / Cinza' },
+      { nome: 'Status', valor: 'Disponível' }
+    ]
   }
 ]
 </script>

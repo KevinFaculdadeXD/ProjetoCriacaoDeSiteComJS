@@ -21,7 +21,7 @@ defineProps({
       <p class="ano-texto">Ano: {{ ano }}</p>
       <div class="card-footer">
         <span class="preco-texto">R$ {{ preco }}</span>
-        <router-link :to="rota" class="btn-detalhes">Ver Mais</router-link>
+        <RouterLink :to="rota" class="btn-detalhes">Ver Mais</RouterLink>
       </div>
     </div>
   </div>

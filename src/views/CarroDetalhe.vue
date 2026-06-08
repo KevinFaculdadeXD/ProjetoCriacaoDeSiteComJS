@@ -1,23 +1,23 @@
 <script setup>
-const carro = {
-  nome: 'Chevrolet Vectra',
-  modelo: 'Elegance',
-  ano: 2006,
-  preco: '32.000',
-  imagem: '/src/assets/img/Chevrolet Vectra.jpg',
-  especificacoes: [
-    { nome: 'Motor', valor: '2.0 8V' },
-    { nome: 'Câmbio', valor: 'Manual' },
-    { nome: 'Combustível', valor: 'Flex' },
-    { nome: 'Cor', valor: 'Preto / Cinza' },
-    { nome: 'Status', valor: 'Disponível' }
-  ],
-  descricao: 'Vectra Elegance em excelente estado de conservação. Oferece o máximo em conforto e presença, ideal para quem busca um sedan robusto, espaçoso e com ótimo custo-benefício.'
-};
+import { ref, onMounted } from 'vue'
+import { useRoute } from 'vue-router'
+import { listaCarros } from '../data/carros.js'
+
+const route = useRoute()
+const carro = ref(null)
+
+onMounted(() => {
+  const idCarro = route.params.id
+  const encontrado = listaCarros.value.find(c => c.id === idCarro)
+  
+  if (encontrado) {
+    carro.value = encontrado
+  }
+})
 </script>
 
 <template>
-  <div class="container page-carro">
+  <div v-if="carro" class="container page-carro">
     <router-link to="/catalogo" class="btn-voltar">
       <span>←</span> Voltar para o Catálogo
     </router-link>
@@ -27,7 +27,7 @@ const carro = {
         <img :src="carro.imagem" :alt="carro.nome" />
       </div>
       <div class="info-carro">
-        <h1 class="titulo-carro">{{ carro.nome }} <span class="modelo">{{ carro.modelo }}</span></h1>
+        <h1 class="titulo-carro">{{ carro.nome }}</h1>
         <p class="preco-carro">R$ {{ carro.preco }}</p>
       </div>
     </div>
@@ -55,6 +55,13 @@ const carro = {
     <div class="acao-venda">
       <p>Este carro pode ser seu! Entre em contato agora.</p>
       <router-link to="/contato" class="btn-primary btn-comprar">Tenho Interesse</router-link>
+    </div>
+  </div>
+  
+  <div v-else class="container">
+    <div style="text-align: center; padding: 50px; color: white;">
+      <h2>Veículo não encontrado ou indisponível...</h2>
+      <router-link to="/catalogo" class="btn-primary" style="display: inline-block; margin-top: 20px;">Voltar ao Catálogo</router-link>
     </div>
   </div>
 </template>
